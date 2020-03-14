@@ -1,0 +1,41 @@
+@import "../common_modules/mixins.less";
+
+#app {
+  #content {
+    ul {
+      overflow: hidden;
+      padding-top: 24 / @b;
+      // padding-bottom: 24 / @b;
+      padding-left: 20 / @b;
+      padding-right: 20 / @b;
+      background-color: #fff;
+      li {
+        height: 88 / @b;
+        margin-bottom: 24 / @b;
+        a {
+          display: flex;
+          font-size: 12 / @b;
+          overflow: hidden;
+          img {
+            // display: block;
+            float: left;
+            width: 66 / @b;
+            height: 88 / @b;
+            // margin-bottom: 6 / @b;
+          }
+          .content {
+            flex: 1;
+            padding-left: 16 / @b;
+            .name {
+              font-size: 16 / @b;
+              color: #000;
+            }
+            .description {
+              color: rgba(0, 0, 0, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

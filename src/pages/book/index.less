@@ -1,0 +1,121 @@
+@import "../common_modules/mixins.less";
+
+#app {
+  #content {
+    padding-top: 24 / @b;
+    .top {
+      text-align: center;
+      margin-bottom: 16 / @b;
+      img {
+        width: 96 / @b;
+        height: 132 / @b;
+      }
+      h1 {
+        font-size: 20 / @b;
+        line-height: 1;
+        margin-top: 4 / @b;
+      }
+      div {
+        margin-top: 4 / @b;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12 / @b;
+      }
+    }
+    nav {
+      color: #a26924;
+      font-size: 14 / @b;
+      display: flex;
+      height: 45 / @b;
+      a {
+        position: relative;
+        display: block;
+        flex: 1;
+        text-align: center;
+        div {
+          font-size: 12 / @b;
+          color: rgba(0, 0, 0, 0.5);
+        }
+        h4 {
+          margin: 0;
+          margin-top: 8 / @b;
+          line-height: 1;
+          font-weight: inherit;
+        }
+        &:first-child {
+          color: rgba(0, 0, 0, 0.5);
+        }
+        &:last-child {
+          &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 1px;
+            height: 0.24rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+    .description {
+      margin-top: 24 / @b;
+      margin-bottom: 8 / @b;
+      padding-left: 20 / @b;
+      padding-right: 20 / @b;
+      padding-top: 16 / @b;
+      padding-bottom: 16 / @b;
+      background-color: #fff;
+      font-size: 14 / @b;
+      h3 {
+        font-weight: bold;
+        font-size: 14 / @b;
+      }
+      p {
+        margin-top: 8 / @b;
+      }
+    }
+    .chapters,
+    .subbooks {
+      padding-left: 20 / @b;
+      padding-right: 20 / @b;
+      background-color: #fff;
+      padding-top: 16 / @b;
+      h3 {
+        font-weight: bold;
+        font-size: 14 / @b;
+      }
+      ul {
+        li {
+          a {
+            display: block;
+            line-height: 48 / @b;
+            height: 48 / @b;
+            color: #a26924;
+            font-size: 16 / @b;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          }
+          &:last-child {
+            a {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+      .subbook {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        &:last-child {
+          border-bottom: 0;
+        }
+        li {
+          &:first-child {
+            a {
+              text-align: center;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

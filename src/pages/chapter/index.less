@@ -1,0 +1,59 @@
+@import "../common_modules/mixins.less";
+
+#app {
+  #content {
+    padding-top: 16 / @b;
+    nav {
+      color: #a26924;
+      font-size: 14 / @b;
+      display: flex;
+      height: 45 / @b;
+      a {
+        position: relative;
+        display: block;
+        flex: 1;
+        text-align: center;
+        div {
+          font-size: 12 / @b;
+          color: rgba(0, 0, 0, 0.5);
+        }
+        h4 {
+          margin: 0;
+          margin-top: 8 / @b;
+          line-height: 1;
+          font-weight: inherit;
+        }
+        &:last-child {
+          &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 1px;
+            height: 0.24rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+    h1 {
+      font-size: 20 / @b;
+      color: #a26924;
+      text-align: center;
+      margin-top: 32 / @b;
+      margin-bottom: 24 / @b;
+    }
+    article {
+      padding-left: 20 / @b;
+      padding-right: 20 / @b;
+      font-size: 18 / @b;
+      line-height: 30 / @b;
+      p {
+        margin-bottom: 30 / @b;
+        text-indent: 10%;
+        word-break: break-word;
+      }
+    }
+  }
+}

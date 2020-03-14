@@ -1,0 +1,43 @@
+@import "./mixins.less";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #f8f7f2;
+  font-family: "Lato", "Helvetica Neue", "PingFang SC", "Myriad Pro",
+    "Hiragino Sans GB", "microsoft yahei";
+}
+
+// 页面主体容器
+#app {
+  width: 100%;
+  color: #000;
+  font-size: 14 / @b;
+  a {
+    color: #a26924;
+    text-decoration: none;
+  }
+  ul, li {
+    list-style: none;
+  }
+}
+
+@media (min-width: 640px) {
+  #app {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+
+@import "./ui/header/index.less";
+@import "./ui/navigator/index.less";
+@import "./ui/footer/index.less";
+@import "./ui/scrollup/index.less";
